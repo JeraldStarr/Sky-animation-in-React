@@ -27,13 +27,14 @@ class Animated extends Component {
     }
     render() {
         const { className, src } = this.props;
+        const { posX, posY } = this.state;
         console.log(this.state);
         return (
             <img 
                 className = {className}
                 src ={src}
                 style = {{
-
+                    transform: `translate(${posX}px, ${posY}px)`
                 }}
                 alt = ""/>
         )
